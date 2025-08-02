@@ -1,0 +1,2 @@
+self.addEventListener('install',e=>e.waitUntil(caches.open('s').then(c=>c.addAll(['./','./index.html','./style.css','./script.js','./manifest.json','./icon_sevu_emdr.png','./safe_heartbeat.wav']))));
+self.addEventListener('fetch',e=>e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request))));

@@ -1,0 +1,1 @@
+{"name": "sevu EMDR", "short_name": "EMDR", "display": "standalone", "start_url": "./index.html", "background_color": "#f8f4ed", "theme_color": "#0077ff", "icons": [{"src": "icon_sevu_emdr.png", "sizes": "512x512", "type": "image/png"}]}

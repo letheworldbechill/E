@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>sevu EMDR</title>
+<link rel="icon" href="icon_sevu_emdr.png">
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Splash -->
+<div id="splash"><img id="splashLogo" src="icon_sevu_emdr.png" alt="Logo"></div>
+
+<!-- Stage -->
+<div id="stage"><div id="dotWrapper"><div id="dot"></div></div></div>
+
+<!-- Timer -->
+<div id="timer" aria-live="polite"></div>
+
+<!-- Controls -->
+<button id="startStop" class="btn main">Start</button>
+<button id="menuBtn" class="btn menu">&#9776;</button>
+
+<!-- Menu -->
+<aside id="menu" class="hidden" aria-hidden="true">
+  <h2>Einstellungen</h2>
+  <label>BPM: <span id="speedLabel">60</span></label>
+  <input type="range" id="speedRange" min="60" max="240" value="60">
+  <label>Dauer (Sek):</label>
+  <select id="durationSelect">
+    <option>30</option><option selected>45</option><option>60</option>
+  </select>
+  <label>Sets:</label>
+  <input type="number" id="setsInput" min="1" max="12" value="8">
+  <label>Pause (Sek):</label>
+  <input type="number" id="pauseInput" min="3" max="30" value="8">
+</aside>
+
+<!-- Eval Modal -->
+<div id="eval" class="modal hidden"><div class="modal-box">
+  <p>Wie fühlst du dich?</p>
+  <button id="continueBtn" class="btn main small">Weiter</button>
+</div></div>
+
+<audio id="heartbeat" src="safe_heartbeat.wav" preload="auto"></audio>
+<script src="script.js"></script>
+<script>if('serviceWorker'in navigator)navigator.serviceWorker.register('sw.js');</script>
+</body></html>
